@@ -1,2 +1,4 @@
 # Site-de-Festas
-Site de casa de festas
+Site de uma casa de festas infatis
+Site Simples e intuitivo
+autor:Breno Santod
