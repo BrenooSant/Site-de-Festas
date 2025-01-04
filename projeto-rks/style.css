@@ -1,0 +1,250 @@
+
+* {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;    
+  }
+  
+  img {
+    display: block;
+    margin-right: 0%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  
+  nav {
+    margin: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(#040607,#171a1c )
+    
+  }
+  
+  nav #menu-buttons {
+    display: none; 
+    margin-top: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+    top: -6px;
+  }
+  
+  nav a:hover {
+    color: #909000;
+  }
+  
+  
+  button {
+    background-color: #040607;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    padding: 15px 15px;
+    opacity: 100%;
+    font-weight: bold; 
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #909000;
+  }
+  
+  #Sobre {
+    margin-top: 0;
+    background-color: #171a1c;
+    width: 100%;
+    height: 80%;
+  
+  }
+  
+  #ps{
+    margin-top: 45px;
+    font-weight: bold;
+    font-size: 25px;
+   color: #ffffff;
+   float: right;
+   width: 38%;
+   height: 60%;
+   }
+  
+   #Localização{
+    background-color: #171a1c;
+    width: 100%;
+    height: 80%;
+  
+  }
+  
+  #loc{
+    margin-top: 45px;
+    font-weight: bold;
+    font-size: 25px;
+   color: #ffffff;
+   float: right;
+   width: 38%;
+   height: 60%;
+  }
+  
+  #Contato {
+    color: aliceblue;
+    background-color: #171a1c;
+    width: 100%;
+    height: 18%;
+  }
+  
+  #cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    
+  
+  }
+  
+  
+  
+  #links {
+    background-color: #171a1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; 
+    margin-top: -2px; 
+    
+  }
+  
+  #links img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px; 
+    transition: transform 0.3s ease;
+  }
+  
+  #links img:hover {
+    transform: scale(1.1);
+  }
+  
+  #glob{
+    background-color: #171a1c;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider{
+    margin: 0 auto;
+    width: 580px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 25%;
+    position: relative;
+    transition: 3s;
+  }
+  
+  .slide img{
+    width: 580px;
+  }
+  
+  .manual-navigation{
+    position: absolute;
+    width: 580px;
+    margin-top: -65px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+    
+  }
+  
+  .manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.8s;
+  }
+
+
+  .manual-btn:hover{
+    background-color: #ffffff;
+  }
+
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+
+  #radio2:checked ~ .first{
+    margin-left: -25%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -50%;
+  }
+
+  #radio4:checked ~ .first{
+    margin-left: -75%;
+  }
+
+ 
+
+.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 580px;
+    margin-top: 335px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #ffffff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #ffffff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #ffffff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #ffffff;
+}
