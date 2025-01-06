@@ -66,7 +66,7 @@ button {
 
   
 button:hover {
-    background-color: #909000;
+    background-color: #00000057;
 }
   
 #Sobre {
@@ -77,19 +77,26 @@ button:hover {
 }
   
 #ps {
-    margin-top: -5px;
+    margin-top: 30px;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 28px;
     color: #ffffff;
     float: right;
     margin-right: 45px;
-    width: 38%;
-    height: 60%;
+    width: 45%;
+    height: 80%;
     background-color: #ffffff11;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-items: center;
+}
+
+#img-sobre{
+    display: flex;
+    align-content: center;
+    width: 48%;
+    border-radius: 20px;
 }
   
 #Localização {
@@ -116,42 +123,105 @@ button:hover {
     
 }
   
+
 #Contato {
-    color: aliceblue;
     background-color: #171a1c;
-    width: 100%;
-    height: 18%;
-    padding:0px;
-}
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Poppins', sans-serif;
+  }
   
-#cont {
+  .contact-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: 1.5s ease;
+  }
+  
+  #cont {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .contact-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #d3d3d3;
+    line-height: 1.6;
+  }
+  
+  .social-buttons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    padding:40px;
-}
+    gap: 30px;
+  }
   
-#links {
-    background-color: #171a1c;
+  .social-button {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 50px; 
-    margin-top: 0px; 
-}
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition:  0.3s ease,  0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
   
-#links img {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px; 
-    transition: transform 0.3s ease;
-    margin-top: -2px;
-}
+  .social-button img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
   
-#links img:hover {
+  .social-button.whatsapp {
+    background: #25D366;
+  }
+  
+  .social-button.instagram {
+    background: #E1306C;
+  }
+  
+  .social-button:hover {
     transform: scale(1.1);
-}
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.963);
+  }
+  
+  .social-button span {
+    z-index: 2;
+  }
+  
+  .social-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-45deg);
+    transition: left 0.5s ease;
+  }
+  
+  .social-button:hover::before {
+    left: 100%;
+  }
+  
+  /* Animação */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   
 #glob {
     display: flex;
@@ -159,27 +229,24 @@ button:hover {
     align-items: center;
     background-color: #171a1c;
     margin: 0;
-    padding: 40;
+    padding: 0;
     width: 100%;
     height: 100vh;
+    
 }
   
 .slider {
-    margin-top: 80px;
-    margin-bottom: -35px;
-    margin-left: -5px;
-    margin-right: 69px;
+    margin: 350 20 -5 15;
     padding: 0;
-    width: 900px;
-    height: 800px;
-    overflow: hidden;
-    
+    width: 850px;
+    height: 900px;
+    overflow: hidden;  
 }
   
 .slides {
     margin: 0;
     width: 400%;
-    height: 650px;
+    height: 550px;
     display: flex;
 }
   
@@ -244,7 +311,7 @@ button:hover {
 .navigation-auto {
     position: absolute;
     width: 900px;
-    margin-top: 585px;
+    margin-top: 485px;
     display: flex;
     justify-content: center;
 }
