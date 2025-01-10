@@ -1,47 +1,46 @@
+
 * {
     font-size: 25px;
     margin: 0;
     padding: 0; 
     scroll-behavior: smooth;   
-}
-  
-img {
-    display: flex;
-    max-height: 100%;
-}
-
-#fest{
-    margin-top: 30px;
-    align-self: flex-start;
-    max-width: none;
-    margin-left: 90px;
+    font-family: "Roboto Condensed";
     
 }
   
 .nav {
-    margin-top: 0px;
-    margin: #fff;
+    width: auto;
+    max-width: 93%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 20px;
-    background-color: #040607;
-    
-}
-  
-.nav #menu-buttons {
-    display: none; 
+    padding: 60px;
+    background-color: #0e1011;
 }
 
+#logo{
+    position: absolute;
+    width: 20%;
+    max-width: 180px;
+    min-width: 140px;
+    margin-top: -181px;
+    margin-left: 70px;
+}
   
 .nav a {
+    width: 100%;
+    padding: 15px;
     text-decoration: none;
     color: aliceblue;
     font-size: 25px;
-    font-weight: bold;
     transition: color 0.3s ease;
-    position: relative;
-    top: 0px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
   
 .nav a:hover {
@@ -49,180 +48,19 @@ img {
 }
   
 button {
+    position: flex;
     background-color: #040607;
     color: aliceblue;
     border: 2px solid aliceblue;
     padding: 15px;
-    font-weight: bold; 
     cursor: pointer;
-    transition: 0.3s ease;
-    gap: 0px;
-    margin-right: 30px;
-    
+    transition: 0.3s ease;    
 }
-.nav div {
-    margin-top: -65px; 
-}
-
   
 button:hover {
     background-color: #00000057;
 }
-  
-#Sobre {
-    margin-top: 0;
-    background-color: #171a1c;
-    width: 100%;
-    height: 80%;
-}
-  
-#ps {
-    margin-top: 30px;
-    font-weight: bold;
-    font-size: 28px;
-    color: #ffffff;
-    float: right;
-    margin-right: 45px;
-    width: 45%;
-    height: 80%;
-    background-color: #ffffff11;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-}
 
-#img-sobre{
-    display: flex;
-    align-content: center;
-    width: 48%;
-    border-radius: 20px;
-}
-  
-#Localização {
-    background-color: #171a1c;
-    width: 100%;
-    height: 80%;
-    
-}
-  
-#loc {
-    margin-top: 60px;
-    font-weight: bold;
-    font-size: 24px;
-    color: #ffffff;
-    float: left;
-    margin-left: 45px;
-    width: 45%;
-    height:60%;
-    background-color: #ffffff11;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    
-}
-  
-
-#Contato {
-    background-color: #171a1c;
-    color: #ffffff;
-    text-align: center;
-    padding: 60px 20px;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .contact-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    animation: 1.5s ease;
-  }
-  
-  #cont {
-    font-size: 42px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .contact-text {
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #d3d3d3;
-    line-height: 1.6;
-  }
-  
-  .social-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .social-button {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    transition:  0.3s ease,  0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .social-button img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .social-button.whatsapp {
-    background: #25D366;
-  }
-  
-  .social-button.instagram {
-    background: #E1306C;
-  }
-  
-  .social-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.963);
-  }
-  
-  .social-button span {
-    z-index: 2;
-  }
-  
-  .social-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 300%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: skewX(-45deg);
-    transition: left 0.5s ease;
-  }
-  
-  .social-button:hover::before {
-    left: 100%;
-  }
-  
-  /* Animação */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
 #glob {
     display: flex;
     justify-content: center;
@@ -230,7 +68,7 @@ button:hover {
     background-color: #171a1c;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: auto;
     height: 100vh;
     
 }
@@ -336,6 +174,166 @@ button:hover {
     background-color: #ffffff;
 }
 
+#Sobre {
+    display: flex;
+    justify-content: center;
+    background-color: #171a1c;
+    width: 100%;
+    height: 90%;
+    gap: 60px;
+}
+  
+#ps {
+    line-height: 1.6;
+    text-align: center;
+    border: 2px solid;
+    margin-top: 0px;
+    font-size: 22px;
+    color: #ffffff;
+    width: 75%;
+    max-width: 700px;
+    height: 90%;
+    background-color: #ffffff11;
+    border-radius: 10px;
+    display: flex;
+    align-items: start;
+    padding: 10px;
+}
+
+#img-sobre{
+    width: auto;
+    max-width: 40%;
+    border-radius: 20px;
+}
+
+#Localização {
+    background-color: #171a1c;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+}
+  
+#loc {
+    line-height: 1.5;
+    text-align: center;
+    border: solid;
+    margin-top: 70px;
+    font-size: 22px;
+    color: #ffffff;
+    float: left;
+    margin-left: 45px;
+    width: auto;
+    max-width: 45%;
+    height:90%;
+    background-color: #ffffff11;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+  
+#Contato {
+    background-color: #171a1c;
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .contact-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: 1.5s ease;
+  }
+  
+  #cont {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .contact-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #d3d3d3;
+    line-height: 1.6;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition:  0.3s ease,  0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-button img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .social-button.whatsapp {
+    background: #25D366;
+  }
+  
+  .social-button.instagram {
+    background: #E1306C;
+  }
+  
+  .social-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.963);
+  }
+  
+  .social-button span {
+    z-index: 2;
+  }
+  
+  .social-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-45deg);
+    transition: left 0.5s ease;
+  }
+  
+  .social-button:hover::before {
+    left: 100%;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+
 #mapa{
     margin-top: 70px;
     float: right;
@@ -398,9 +396,6 @@ button:hover {
     margin-bottom: 40%;            
     font-size: 50px;
 }
-
-
-
 
 
 /* Responsividade */
