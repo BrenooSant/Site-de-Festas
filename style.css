@@ -7,6 +7,12 @@
     font-family: "Roboto Condensed";
     
 }
+
+body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+    width: 100%;        /* Garante que o body ocupe apenas a largura da viewport */
+}
+
   
 .nav {
     width: auto;
@@ -26,7 +32,19 @@
     margin-top: -181px;
     margin-left: 70px;
 }
-  
+
+
+@media (max-width: 800px) {
+    #logo{
+        margin-top: -35%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+
+
 .nav a {
     width: 100%;
     padding: 15px;
@@ -36,16 +54,48 @@
     transition: color 0.3s ease;
 }
 
-.button-container{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
   
-.nav a:hover {
-    color: #909000;
-}
+  .menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: aliceblue;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+      margin-top: 60px;
+    }
+  
+    .button-container {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      background-color: #0e1011;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 80%;
+      padding: 20px;
+      border: 1px solid aliceblue;
+    }
+  
+    .button-container.show {
+      display: flex;
+    }
+  
+    .button-container button {
+      margin: 10px 0;
+    }
+  }
+  
   
 button {
     position: flex;
@@ -56,10 +106,16 @@ button {
     cursor: pointer;
     transition: 0.3s ease;    
 }
+
+.nav a:hover {
+    color: #909000;
+}
   
+
 button:hover {
     background-color: #00000057;
 }
+
 
 #glob {
     display: flex;
@@ -183,7 +239,9 @@ button:hover {
     gap: 60px;
 }
   
+
 #ps {
+    order: 2;
     line-height: 1.6;
     text-align: center;
     border: 2px solid;
@@ -192,30 +250,39 @@ button:hover {
     color: #ffffff;
     width: 75%;
     max-width: 700px;
-    height: 90%;
+    height: 60%;
     background-color: #ffffff11;
     border-radius: 10px;
     display: flex;
-    align-items: start;
-    padding: 10px;
+    flex-direction: column; /* Organiza os elementos na vertical */
+    justify-content: center; /* Centraliza os itens */
+    padding: 20px; /* Espaço interno */
 }
 
 #img-sobre{
+    order: 1;
     width: auto;
-    max-width: 40%;
+    width: 700px;
+    max-width: 70%;
     border-radius: 20px;
 }
 
+
+
+
+
+  
 #Localização {
     background-color: #171a1c;
     width: 100%;
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
     gap: 60px;
     
 }
   
+
 #loc {
     line-height: 1.5;
     text-align: center;
@@ -227,14 +294,16 @@ button:hover {
     margin-left: 45px;
     width: auto;
     max-width: 45%;
-    height:90%;
+    height: 50%;
     background-color: #ffffff11;
     border-radius: 10px;
     display: flex;
-    align-items: center;
-    justify-items: center;
+    flex-direction: column; /* Organiza os elementos na vertical */
+    justify-content: center; /* Centraliza os itens */
+    padding: 20px; /* Espaço interno */
 }
   
+
 #Contato {
     background-color: #171a1c;
     color: #ffffff;
@@ -341,6 +410,12 @@ button:hover {
    
 }
 
+#titulo{
+    width: 100%;
+    height: 40%;
+    background-color: #171a1c;
+}
+
 #clientes{
     font-family:'Poppins', sans-serif;
     color: #fff;
@@ -348,13 +423,20 @@ button:hover {
     justify-content: center;
     background-color: #171a1c;
     font-size: 60px;
-    padding: 100px;
+    padding: 80;
+    margin-top: -60px;
 }
 
-.destaque{
+#destaque{
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
     color: #909000;
     font-size: 60px;
-    margin-left: 15px;
+    background-color: #171a1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
 }
 
 
@@ -398,12 +480,16 @@ button:hover {
 }
 
 
+
+
+
+
 /* Responsividade */
 @media screen and (max-width: 768px) {
     nav {
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
+        padding: 10px;
     }
 
     nav #menu-buttons {
@@ -413,24 +499,60 @@ button:hover {
     .slider {
         width: 100%;
         height: auto;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
-
+    
     #ps, #loc {
         font-size: 18px;
         width: 100%;
     }
 
+    #ps{
+        margin-bottom: 100%;
+    }
+
+
+    #loc{
+        margin-top: 100%;
+        padding: 30px;
+        width: 100%;
+        
+    }
+    
+    #Sobre, #Localização {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+    }
+
+
+    #img-sobre, #mapa {
+        height: 100%;
+        width: 100%; 
+    }
+    
+    #img-sobre{
+        margin-top: 100%;
+    }
+    
+    #mapa{
+        margin-bottom: 100%;
+        margin-left: 8.2%;
+    }
+    
+
     #glob {
         height: auto;
-        padding: 20px;
+        padding: 10px;
     }
 
     #cont {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     #links img {
-        width: 50px;
+        width: 100px;
         height: 50px;
     }
 
@@ -439,13 +561,19 @@ button:hover {
         margin-top: 10px;
     }
 
-    #ps, #loc {
-        font-size: 18px;
-        width: 100%;
+    
+    #clientes{
+        font-size: 40px;
+        text-align: center;
+        margin: -1px 0px;
+    }
+
+    #destaque{
+        margin: -85px 160px 50px 160px;
+        font-size: 40px;
+        display: flex;
     }
 }
 
-#img-sobre{
-    margin-left: 20px;
-}
+
 
