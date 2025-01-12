@@ -449,6 +449,7 @@ button:hover {
 
     body {
         max-width: 768px;
+        width: 768px;
     }
 
     #logo{
