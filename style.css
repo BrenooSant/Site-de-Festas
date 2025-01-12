@@ -9,8 +9,8 @@
 }
 
 body {
-    overflow-x: hidden; /* Impede a rolagem horizontal */
-    width: 100%;        /* Garante que o body ocupe apenas a largura da viewport */
+    overflow-x: hidden; 
+    width: 100%;        
 }
 
   
@@ -64,44 +64,15 @@ body {
   .menu-toggle .bar {
     width: 30px;
     height: 3px;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.996);
     transition: all 0.3s ease;
   }
-  
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: flex;
-      margin-top: 60px;
-    }
-  
-    .button-container {
-      display: none;
-      flex-direction: column;
-      align-items: flex-end;
-      background-color: #0e1011;
-      position: absolute;
-      top: 60px;
-      right: 10px;
-      width: 80%;
-      padding: 20px;
-      border: 1px solid aliceblue;
-    }
-  
-    .button-container.show {
-      display: flex;
-    }
-  
-    .button-container button {
-      margin: 10px 0;
-    }
-  }
-  
   
 button {
     position: flex;
     background-color: #040607;
     color: aliceblue;
-    border: 2px solid aliceblue;
+    border: 2px solid rgb(240, 248, 255);
     padding: 15px;
     cursor: pointer;
     transition: 0.3s ease;    
@@ -115,7 +86,6 @@ button {
 button:hover {
     background-color: #00000057;
 }
-
 
 #glob {
     display: flex;
@@ -153,7 +123,7 @@ button:hover {
     position: relative;
     transition: 3s;
 }
-  
+
 .slide img {
     margin: 0;
     width: 100%;
@@ -170,7 +140,7 @@ button:hover {
 }
   
 .manual-btn {
-    border: 2px solid white;
+    
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -195,7 +165,7 @@ button:hover {
 }
 
 .navigation-auto div {
-    border: 2px solid #20a6ff;
+    
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -215,20 +185,21 @@ button:hover {
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
-    background-color: #ffffff;
+    background-color: #ffffff00;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2 {
-    background-color: #ffffff;
+    background-color: #ffffff00;
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3 {
-    background-color: #ffffff;
+    background-color: #ffffff00;
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4 {
-    background-color: #ffffff;
+    background-color: #ffffff00;
 }
+
 
 #Sobre {
     display: flex;
@@ -241,11 +212,11 @@ button:hover {
   
 
 #ps {
-    order: 2;
     line-height: 1.6;
     text-align: center;
     border: 2px solid;
     margin-top: 0px;
+    margin-right: 30px;
     font-size: 22px;
     color: #ffffff;
     width: 75%;
@@ -254,24 +225,18 @@ button:hover {
     background-color: #ffffff11;
     border-radius: 10px;
     display: flex;
-    flex-direction: column; /* Organiza os elementos na vertical */
-    justify-content: center; /* Centraliza os itens */
-    padding: 20px; /* Espaço interno */
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 20px; 
 }
 
 #img-sobre{
-    order: 1;
     width: auto;
     width: 700px;
     max-width: 70%;
     border-radius: 20px;
 }
 
-
-
-
-
-  
 #Localização {
     background-color: #171a1c;
     width: 100%;
@@ -281,26 +246,25 @@ button:hover {
     gap: 60px;
     
 }
-  
+
 
 #loc {
-    line-height: 1.5;
-    text-align: center;
-    border: solid;
-    margin-top: 70px;
+    line-height: 1.6;
+    margin-top: 69px;
+    margin-left: 30px;
     font-size: 22px;
     color: #ffffff;
-    float: left;
-    margin-left: 45px;
-    width: auto;
-    max-width: 45%;
-    height: 50%;
-    background-color: #ffffff11;
+    border: 2px solid;
+    width: 75%;
+    max-width: 400px;
+    height: 60%;
     border-radius: 10px;
+    padding: 20px;
     display: flex;
-    flex-direction: column; /* Organiza os elementos na vertical */
-    justify-content: center; /* Centraliza os itens */
-    padding: 20px; /* Espaço interno */
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center;
+    background-color: #ffffff11;
 }
   
 
@@ -309,16 +273,16 @@ button:hover {
     color: #ffffff;
     text-align: center;
     padding: 60px 20px;
-  }
+}
   
   .contact-wrapper {
-    max-width: 900px;
+      max-width: 900px;
     margin: 0 auto;
     animation: 1.5s ease;
   }
   
   #cont {
-    font-size: 42px;
+      font-size: 42px;
     font-weight: bold;
     margin-bottom: 20px;
   }
@@ -348,24 +312,24 @@ button:hover {
     transition:  0.3s ease,  0.3s ease;
     position: relative;
     overflow: hidden;
-  }
+}
   
-  .social-button img {
+.social-button img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
-  }
-  
-  .social-button.whatsapp {
+}
+
+.social-button.whatsapp {
     background: #25D366;
-  }
-  
+}
+
   .social-button.instagram {
     background: #E1306C;
   }
   
   .social-button:hover {
-    transform: scale(1.1);
+      transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.963);
   }
   
@@ -386,13 +350,13 @@ button:hover {
   }
   
   .social-button:hover::before {
-    left: 100%;
+      left: 100%;
   }
   
   
   @keyframes fadeIn {
-    from {
-      opacity: 0;
+      from {
+          opacity: 0;
       transform: translateY(-20px);
     }
     to {
@@ -480,44 +444,80 @@ button:hover {
 }
 
 
-
-
-
-
 /* Responsividade */
 @media screen and (max-width: 768px) {
+
+    body {
+        max-width: 768px;
+    }
+
+    #logo{
+        margin-top: -140px;
+    }
+
+    .menu-toggle {
+      display: flex;
+      margin-top: 0px;
+    }
+    
+    .button-container {
+      display: none;
+      flex-direction: column;
+      background-color: #0e1011;
+      position: absolute;
+      width: 100%;
+      padding: 5px;
+      border: 1px solid aliceblue;
+      margin-top: 80px;
+      margin-right: -60px;
+      z-index: 1;
+    }
+    
+    .button-container.show {
+      display: flex;
+      align-content: center;
+    }
+    
+    .button-container button {
+      margin: 10px 0px 0px 5px;
+    }
     nav {
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px;
-    }
-
-    nav #menu-buttons {
-        display: block;
+        padding: 20px;
     }
 
     .slider {
         width: 100%;
         height: auto;
-        margin-top: 10%;
-        margin-bottom: 10%;
+        margin-top: 5%;
+        margin-bottom: 20%;
+        margin-left: 25px;
+    }
+
+    #ps, #loc {
+        text-align: center;
+        font-size: 19px;
+        width: 85%;
+    }
+
+    #ps {
+        margin-top: 55px;
+        margin-left: 30px;
+        order: 1; 
+    }
+
+    #img-sobre {
+        order: 2; 
+        margin-bottom: 45px;
     }
     
-    #ps, #loc {
-        font-size: 18px;
-        width: 100%;
-    }
-
-    #ps{
-        margin-bottom: 100%;
-    }
-
-
-    #loc{
-        margin-top: 100%;
+    #loc {
+        margin-top: 125%;
         padding: 30px;
         width: 100%;
-        
+        height: 100%;
+        margin-right: 30px;
     }
     
     #Sobre, #Localização {
@@ -526,22 +526,20 @@ button:hover {
         gap: 20px; 
     }
 
-
     #img-sobre, #mapa {
         height: 100%;
         width: 100%; 
     }
-    
-    #img-sobre{
-        margin-top: 100%;
+
+    #img-sobre {
+        margin-top: 0px; 
     }
     
-    #mapa{
+    #mapa {
         margin-bottom: 100%;
         margin-left: 8.2%;
     }
     
-
     #glob {
         height: auto;
         padding: 10px;
@@ -560,20 +558,17 @@ button:hover {
         width: 100%;
         margin-top: 10px;
     }
-
     
-    #clientes{
+    #clientes {
         font-size: 40px;
         text-align: center;
         margin: -1px 0px;
     }
 
-    #destaque{
-        margin: -85px 160px 50px 160px;
+    #destaque {
+        margin: -75px 160px 50px 160px;
         font-size: 40px;
         display: flex;
     }
 }
-
-
 
