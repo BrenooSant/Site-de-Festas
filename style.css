@@ -306,7 +306,7 @@ button:hover {
     padding: 15px 20px;
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 8px;
     transition:  0.3s ease,  0.3s ease;
@@ -445,10 +445,10 @@ button:hover {
 
 
 /* Responsividade */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 768px) {
 
     body {
-        max-width: 350px;
+        max-width: 768px;
     }
 
     #logo{
